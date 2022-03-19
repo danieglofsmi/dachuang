@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/sitecss.css">
+    <title>upload</title>
+</head>
+
+<body>
+    <h2>upload</h2>
+    <!--上传表单-->
+    <form action="{% url 'doupload'%}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}<!--post表单被服务器拦截，加入令牌-->
+        标题名称:<input type="text" name="title"><br></br>
+        上传文件:<input type="file" name="doc"><br></br>
+        <input type="submit" value="upload" >
+    </form>
+    <p>{{json_out}}</p>
+</body>
+
+</html>
