@@ -1,0 +1,62 @@
+  body {
+    background-image: url("../images/bg.jpg");
+    background-size: 100% 100%;
+    margin: 30px;
+    background-attachment: fixed;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: left;
+    color:beige;
+    word-wrap:break-word;  
+    word-break:break-all;  
+}
+
+  .container {  display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 70% 50%;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logoandslogan logoandslogan"
+      "text info"
+      "photo photo";
+  }
+
+  .logoandslogan { grid-area: logoandslogan;
+    background: rgba(194, 192, 192, 0.65);border-radius: 40px;margin: auto;
+    width: 1000px;;
+    height:70px;
+    text-align: center;
+   }
+  
+  .text { grid-area: text;
+    /* position: absolute;left: 38px;top: 0.75fr;width:1.2fr;height:1.3fr; */
+    background:rgba(194, 192, 192, 0.65);border-radius: 40px;margin: auto;padding-left: 20px;padding-right: 20px;
+    width:500px;
+    height:500px;
+   }
+  
+  .photo { grid-area: photo;
+    background:rgba(194, 192, 192, 0.65);border-radius: 40px;margin: auto;
+    width:1000px;
+    height: 200px;
+    text-align: center;
+   }
+  
+  .info { grid-area: info;
+    background:rgba(194, 192, 192, 0.65);border-radius: 40px;margin: auto;padding-left: 20px;padding-right: 20px;
+    width:500px;
+    height:500px;
+   }
+
+  .header{
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  /* .info2 { grid-area: info2;
+    background:rgba(194, 192, 192, 0.6);border-radius: 40px;margin: auto;
+    width:500px;
+    height:300px;
+    color:silver; } */
+  
